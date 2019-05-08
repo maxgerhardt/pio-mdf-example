@@ -22,6 +22,10 @@ This project has all libraries locally in `lib/` and doesn't use globally-regist
 
 For examples which may need more RAM and boards which have PSRAM, add the needed PSRAM flags from [here](https://github.com/maxgerhardt/pio-esp-adf-example/blob/master/platformio.ini#L12-L26).
 
+## Caveats
+
+When creating a new project based from this, don't forget to add import `sdkconfig.h` overrides as e.g. seen in https://github.com/espressif/esp-mdf/blob/master/examples/get-started/sdkconfig.defaults, as this may drastically change the behaviour / stability of the code.
+
 ## Codebase
 
 All ESP-MDF code present is a momentary snapshot at [esp-mdf@67a0a5b](https://github.com/espressif/esp-mdf/commit/67a0a5bd72ed284f7a5bf50694f1ab942319dd6b) (09 May 2019).
